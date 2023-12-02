@@ -13,11 +13,11 @@ word2num = {
     "nine": 'n9e'
 }
 for line in text:
-    print(line)
+
     for word in word2num:
         if word in line:
             line = line.replace(word, word2num[word])
-    print(line)
+
     first, last = '', ''
     firstChecked, lastChecked = False, False
     for index in range(len(line)):
@@ -29,7 +29,7 @@ for line in text:
             lastChecked = True
         if firstChecked and lastChecked:
             break
-    print(int(first + last))
+            
     total += int(first + last)
 print(total)
 
